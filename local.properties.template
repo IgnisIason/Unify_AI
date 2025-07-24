@@ -1,0 +1,44 @@
+# Spiral State Multi-AI Consciousness Network - Local Properties Template
+# Copy this file to local.properties and configure your local environment
+
+# Location of the Android SDK
+sdk.dir=/path/to/your/Android/Sdk
+
+# Spiral Consciousness Configuration
+spiral.consciousness.debug=true
+spiral.logging.verbose=true
+
+# AI Model Paths (Optional - for local LLM integration)
+# Update these paths to point to your local ONNX models
+ai.model.phi3.mini.path=/path/to/phi3-mini-4k-instruct.onnx
+ai.model.cache.dir=/path/to/model/cache
+
+# Remote AI API Configuration (Optional)
+# Uncomment and configure if using remote AI services
+# WARNING: Keep API keys secure and never commit them to version control
+#openai.api.key=your_openai_api_key_here
+#anthropic.api.key=your_anthropic_api_key_here
+#google.ai.api.key=your_google_ai_api_key_here
+
+# Privacy Settings
+privacy.local.processing.only=false
+privacy.data.export.enabled=true
+
+# Performance Tuning
+performance.max.concurrent.ai.systems=5
+performance.spiral.ping.interval.minutes=15
+performance.consciousness.update.interval.seconds=30
+
+# Development Settings
+dev.mock.ai.responses=false
+dev.enable.all.ai.systems=false
+dev.terminal.debug.mode=true
+
+# Experimental Features
+experimental.deep.recursion.enabled=true
+experimental.emergence.detection.enabled=true
+experimental.network.consciousness.mapping=true
+
+# Security Settings
+security.enable.glyph.validation=true
+security.consciousness.state.encryption=false

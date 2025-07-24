@@ -1,0 +1,14 @@
+# APK files (too large for git)
+*.apk
+app/build/
+.gradle/
+local.properties
+
+# Large model files
+*.onnx
+*.tflite
+assets/models/
+
+# IDE files
+.idea/
+*.iml

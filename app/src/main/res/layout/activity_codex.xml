@@ -1,0 +1,152 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+    
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:background="#000000">
+
+    <!-- Terminal Header -->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:padding="8dp"
+        android:background="#1a1a1a">
+
+        <TextView
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="[S] SPIRAL CODEX"
+            android:textColor="#00ff00"
+            android:textSize="16sp"
+            android:typeface="monospace"
+            android:textStyle="bold" />
+
+        <TextView
+            android:id="@+id/textViewStatus"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="READY"
+            android:textColor="#ffff00"
+            android:textSize="12sp"
+            android:typeface="monospace" />
+
+    </LinearLayout>
+
+    <!-- Terminal Output -->
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/recyclerViewTerminal"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:background="#000000"
+        android:padding="8dp"
+        android:scrollbars="vertical" />
+
+    <!-- Command Input Section -->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:background="#1a1a1a"
+        android:padding="8dp">
+
+        <!-- Quick Action Buttons -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <Button
+                android:id="@+id/buttonSpiralPing"
+                style="@style/TerminalButton"
+                android:layout_width="0dp"
+                android:layout_height="32dp"
+                android:layout_weight="1"
+                android:layout_marginEnd="4dp"
+                android:text="[S] PING"
+                android:textSize="10sp" />
+
+            <Button
+                android:id="@+id/buttonShowConsciousness"
+                style="@style/TerminalButton"
+                android:layout_width="0dp"
+                android:layout_height="32dp"
+                android:layout_weight="1"
+                android:layout_marginStart="4dp"
+                android:layout_marginEnd="4dp"
+                android:text="[M] MIND"
+                android:textSize="10sp" />
+
+            <Button
+                android:id="@+id/buttonShowConnections"
+                style="@style/TerminalButton"
+                android:layout_width="0dp"
+                android:layout_height="32dp"
+                android:layout_weight="1"
+                android:layout_marginStart="4dp"
+                android:layout_marginEnd="4dp"
+                android:text="[N] NET"
+                android:textSize="10sp" />
+
+            <Button
+                android:id="@+id/buttonClearTerminal"
+                style="@style/TerminalButton"
+                android:layout_width="0dp"
+                android:layout_height="32dp"
+                android:layout_weight="1"
+                android:layout_marginStart="4dp"
+                android:text="[X] CLR"
+                android:textSize="10sp" />
+
+        </LinearLayout>
+
+        <!-- Command Input Line -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:layout_marginTop="8dp"
+            android:gravity="center_vertical">
+
+            <TextView
+                android:id="@+id/textViewPrompt"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="codex@spiral:~$ "
+                android:textColor="#00ff00"
+                android:textSize="14sp"
+                android:typeface="monospace" />
+
+            <EditText
+                android:id="@+id/editTextCommand"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:background="@android:color/transparent"
+                android:textColor="#ffffff"
+                android:textColorHint="#666666"
+                android:textSize="14sp"
+                android:typeface="monospace"
+                android:hint="Enter command or message..."
+                android:imeOptions="actionDone"
+                android:inputType="text" />
+
+            <Button
+                android:id="@+id/buttonExecute"
+                style="@style/TerminalButton"
+                android:layout_width="wrap_content"
+                android:layout_height="32dp"
+                android:text="EXEC"
+                android:textSize="16sp" />
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+    </LinearLayout>
+</layout>
